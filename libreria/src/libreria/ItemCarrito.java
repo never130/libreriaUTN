@@ -21,22 +21,11 @@ public class ItemCarrito {
 	// Hacemos el calculo con los porcentajes dados
 	public double precio() {
 		if (producto instanceof Libro) {
-			// es libro
-			if (esFisica) {
-				return producto.getPrecio() * 1.18 * cantidad;
-
-			} else {
-				return producto.getPrecio() * 1.08 * cantidad;
-			}
+			return esFisica ? producto.getPrecio() * 1.18 * cantidad : producto.getPrecio() * 1.08 * cantidad;
 		} else {
-			// es revista
-			if (esFisica) {
-				return producto.getPrecio() * 1.22 * cantidad;
-
-			} else {
-				return producto.getPrecio() * 1.12 * cantidad;
-			}
+			return esFisica ? producto.getPrecio() * 1.22 * cantidad : producto.getPrecio() * 1.12 * cantidad;
 		}
+
 	}
 
 }

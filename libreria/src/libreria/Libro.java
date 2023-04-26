@@ -15,21 +15,4 @@ public class Libro extends Producto {
 	public String getAutor() {
 		return autor;
 	}
-
-	// Metodos heredados de Producto.
-	@Override
-	public String getTitulo() {
-		return titulo;
-	}
-
-	@Override
-	public int getCodigo() {
-		return codigo;
-	}
-
-	@Override
-	public String getEditor() {
-		return editor;
-	}
-
 }

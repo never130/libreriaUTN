@@ -19,12 +19,28 @@ public abstract class Producto {
 		this.fechaPublicacion = fechaPublicacion;
 	}
 
-	// Para modificar los parametros del titulo
+	// Para modificar los parametros del titulo y cantidad
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
 
-	// Obtencion del precio
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+	}
+
+	// Metodos getters
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public String getEditor() {
+		return editor;
+	}
+
 	public double getPrecio() {
 		return precio;
 	}
@@ -32,12 +48,5 @@ public abstract class Producto {
 	public String getFechaPublicacion() {
 		return fechaPublicacion;
 	}
-
-	// Metodos abstractos para implementar en Libro y Revista
-	public abstract int getCodigo();
-
-	public abstract String getEditor();
-
-	public abstract String getTitulo();
 
 }
